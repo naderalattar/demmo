@@ -44,7 +44,6 @@ public class TrackService {
         oldTrack.setTotalHoures(track.getTotalHoures());
         oldTrack.setName(track.getName());
         Track savedTrack= trackRepo.save(oldTrack);
-        System.out.println("master");
 
         return new ResponseEntity<>(savedTrack, HttpStatus.CREATED);
     }
